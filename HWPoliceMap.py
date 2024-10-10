@@ -22,32 +22,3 @@ data = req.content
 seoul_geo = json.loads(data)
 folium.GeoJson(seoul_geo, name='구역표시').add_to(m)
 
-
-
-#folium.choropleth
-
-
-
-'''
-folium.Choropleth(
-    geo_data=state_geo,
-    name="choropleth",
-    data=state_data,
-    columns=["State", "Unemployment"],
-    key_on="feature.id",
-    fill_color="YlGn",
-    fill_opacity=0.7,
-    line_opacity=0.2,
-    legend_name="Unemployment Rate (%)",
-).add_to(m)
-
-folium.LayerControl().add_to(m)
-'''
-
-'''
-path = './data/01map.html'
-m.save(path)
-webbrowser.open(os.path.realpath(path))
-print('01map.html 테스트')
-print()
-'''
